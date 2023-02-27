@@ -47,11 +47,11 @@ payload = {
                                         "happy",
                                         "excited",
                                         "angry",
-                                        "frustrated",
-                                        "sarcastic",
+                                        "frustrated",                    
                                         "neutral",
                                         "unsure",
-                                        "disgusted"]}
+                                        "disgusted",
+                                        "afraid"]}
     }
 if button:
     output = query(payload)
@@ -62,7 +62,7 @@ if button:
             st.write(f'{label}: {np.round(score,2)}')
             perc += score
             nStuffToPlot += 1
-            if perc >= 0.9:
+            if perc >= 0.85:
                 break
         df = pd.DataFrame({'labels': output['labels'][:nStuffToPlot],
                            'scores': output['scores'][:nStuffToPlot]})
