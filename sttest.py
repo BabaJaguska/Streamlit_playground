@@ -51,8 +51,10 @@ payload = {
                                         "neutral",
                                         "unsure",
                                         "disgusted",
-                                        "afraid"]}
+                                        "afraid",
+                                        "hopeful"]}
     }
+
 if button:
     output = query(payload)
     with right:
